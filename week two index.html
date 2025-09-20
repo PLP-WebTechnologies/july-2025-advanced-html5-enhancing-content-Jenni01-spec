@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced HTML5 Content & Form</title>
+    <style><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced HTML5 Content & Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            background: #f9f9f9;
+            color: #333;
+        }
+        header, main, footer {
+            margin-bottom: 2em;
+        }
+        h1, h2, h3 {
+            color: #005bb5;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1em 0;
+        }
+        table, th, td {
+            border: 1px solid #555;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        fieldset {
+            margin-bottom: 1.5em;
+            padding: 1em;
+            border: 1px solid #777;
+            border-radius: 5px;
+            background: #fff;
+        }
+        legend {
+            font-weight: bold;
+            color: #005bb5;
+        }
+        label {
+            display: block;
+            margin: 0.5em 0 0.2em;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 0.8em;
+            border: 1px solid #999;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        input::placeholder, textarea::placeholder {
+            color: #aaa;
+            font-style: italic;
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #0073e6;
+            box-shadow: 0 0 5px rgba(0, 115, 230, 0.5);
+        }
+        /* Validation Styles */
+        input:required:invalid, select:required:invalid, textarea:required:invalid {
+            border-color: #e60000;
+        }
+        input:required:valid, select:required:valid, textarea:required:valid {
+            border-color: #28a745;
+        }
+        input[type="submit"], input[type="reset"] {
+            width: auto;
+            cursor: pointer;
+            background: #0073e6;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-right: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        input[type="submit"]:hover, input[type="reset"]:hover {
+            background: #005bb5;
+        }
+        figure {
+            margin: 1em 0;
+            text-align: center;
+        }
+        figcaption {
+            font-size: 0.9em;
+            color: #555;
+        }
+        footer {
+            text-align: center;
+            font-size: 0.9em;
+            color: #666;
+            border-top: 1px solid #ccc;
+            padding-top: 1em;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>HTML5 Enhanced Page with Forms</h1>
+        <p>This page demonstrates the use of <strong>lists, tables, media</strong>, and a fully validated <strong>HTML5 form</strong>.</p>
+    </header>
+
+    <!-- Lists Section -->
+    <main>
+        <section>
+            <h2>📋 Popular Web Technologies</h2>
+            <ul>
+                <li>HTML5 – Structure of web pages</li>
+                <li>CSS3 – Styling and layouts</li>
+                <li>JavaScript – Interactivity</li>
+                <li>PHP / Node.js – Backend scripting</li>
+                <li>MySQL / MongoDB – Databases</li>
+            </ul>
+
+            <h3>Steps to Build a Web Page</h3>
+            <ol>
+                <li>Write semantic HTML structure.</li>
+                <li>Style it with CSS.</li>
+                <li>Add interactivity with JavaScript.</li>
+                <li>Connect to backend and database.</li>
+                <li>Deploy online.</li>
+            </ol>
+        </section>
+
+        <!-- Table Section -->
+        <section>
+            <h2>📊 Sample Timetable</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>9-11am</th>
+                        <th>11-1pm</th>
+                        <th>2-4pm</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monday</td>
+                        <td>HTML Basics</td>
+                        <td>CSS Styling</td>
+                        <td>Free Practice</td>
+                    </tr>
+                    <tr>
+                        <td>Tuesday</td>
+                        <td>Forms in HTML</td>
+                        <td>Media Embedding</td>
+                        <td>Group Project</td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>Tables & Lists</td>
+                        <td>Responsive Design</td>
+                        <td>Revision</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Media Section -->
+        <section>
+            <h2>🎬 Media Showcase</h2>
+            <p>Here is an image, an audio clip, and a video embedded using HTML5 elements:</p>
+
+            <figure>
+                <img src="https://via.placeholder.com/400x200" alt="Sample Image">
+                <figcaption>Sample Image (Placeholder)</figcaption>
+            </figure>
+
+            <audio controls>
+                <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+
+            <video width="400" controls>
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+        <!-- Form Section -->
+        <section>
+            <h2>📝 Registration Form</h2>
+            <form action="#" method="post">
+
+                <!-- Personal Information -->
+                <fieldset>
+                    <legend>Personal Information</legend>
+
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required minlength="3">
+
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="example@email.com" required autocomplete="email">
+
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Create a password" required minlength="6">
+
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required>
+                </fieldset>
+
+                <!-- Contact Information -->
+                <fieldset>
+                    <legend>Contact Information</legend>
+
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="e.g. +2348012345678" pattern="^\+?[0-9]{10,15}$" required>
+
+                    <label for="country">Country:</label>
+                    <select id="country" name="country" required>
+                        <option value="">--Select Country--</option>
+                        <option value="nigeria">Nigeria</option>
+                        <option value="ghana">Ghana</option>
+                        <option value="kenya">Kenya</option>
+                        <option value="south-africa">South Africa</option>
+                    </select>
+
+                    <label for="address">Address:</label>
+                    <textarea id="address" name="address" placeholder="Enter your full address" rows="3" required></textarea>
+                </fieldset>
+
+                <!-- Preferences -->
+                <fieldset>
+                    <legend>Preferences</legend>
+
+                    <label>
+                        <input type="checkbox" name="updates" value="yes" checked> Subscribe to updates
+                    </label>
+
+                    <p>Preferred Contact Method:</p>
+                    <label><input type="radio" name="contact_method" value="email" required> Email</label>
+                    <label><input type="radio" name="contact_method" value="phone"> Phone</label>
+                </fieldset>
+
+                <!-- Submit -->
+                <input type="submit" value="Submit Form">
+                <input type="reset" value="Reset Form">
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 HTML5 Assignment | Designed for Learning</p>
+    </footer>
+
+</body>
+</html>
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        header, main, footer {
+            margin-bottom: 2em;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1em 0;
+        }
+        table, th, td {
+            border: 1px solid #555;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        fieldset {
+            margin-bottom: 1.5em;
+            padding: 1em;
+            border: 1px solid #777;
+            border-radius: 5px;
+        }
+        legend {
+            font-weight: bold;
+        }
+        label {
+            display: block;
+            margin: 0.5em 0 0.2em;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 0.8em;
+            border: 1px solid #999;
+            border-radius: 4px;
+        }
+        input[type="submit"], input[type="reset"] {
+            width: auto;
+            cursor: pointer;
+            background: #0073e6;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-right: 10px;
+        }
+        input[type="submit"]:hover, input[type="reset"]:hover {
+            background: #005bb5;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>HTML5 Enhanced Page with Forms</h1>
+        <p>This page demonstrates the use of <strong>lists, tables, media</strong>, and a fully validated <strong>HTML5 form</strong>.</p>
+    </header>
+
+    <!-- Lists Section -->
+    <main>
+        <section>
+            <h2>📋 Popular Web Technologies</h2>
+            <ul>
+                <li>HTML5 – Structure of web pages</li>
+                <li>CSS3 – Styling and layouts</li>
+                <li>JavaScript – Interactivity</li>
+                <li>PHP / Node.js – Backend scripting</li>
+                <li>MySQL / MongoDB – Databases</li>
+            </ul>
+
+            <h3>Steps to Build a Web Page</h3>
+            <ol>
+                <li>Write semantic HTML structure.</li>
+                <li>Style it with CSS.</li>
+                <li>Add interactivity with JavaScript.</li>
+                <li>Connect to backend and database.</li>
+                <li>Deploy online.</li>
+            </ol>
+        </section>
+
+        <!-- Table Section -->
+        <section>
+            <h2>📊 Sample Timetable</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>9-11am</th>
+                        <th>11-1pm</th>
+                        <th>2-4pm</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monday</td>
+                        <td>HTML Basics</td>
+                        <td>CSS Styling</td>
+                        <td>Free Practice</td>
+                    </tr>
+                    <tr>
+                        <td>Tuesday</td>
+                        <td>Forms in HTML</td>
+                        <td>Media Embedding</td>
+                        <td>Group Project</td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>Tables & Lists</td>
+                        <td>Responsive Design</td>
+                        <td>Revision</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Media Section -->
+        <section>
+            <h2>🎬 Media Showcase</h2>
+            <p>Here is an image, an audio clip, and a video embedded using HTML5 elements:</p>
+
+            <figure>
+                <img src="https://via.placeholder.com/400x200" alt="Sample Image">
+                <figcaption>Sample Image (Placeholder)</figcaption>
+            </figure>
+
+            <audio controls>
+                <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+
+            <video width="400" controls>
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+        <!-- Form Section -->
+        <section>
+            <h2>📝 Registration Form</h2>
+            <form action="#" method="post">
+
+                <!-- Personal Information -->
+                <fieldset>
+                    <legend>Personal Information</legend>
+
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required minlength="3">
+
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="example@email.com" required autocomplete="email">
+
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Create a password" required minlength="6">
+
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required>
+                </fieldset>
+
+                <!-- Contact Information -->
+                <fieldset>
+                    <legend>Contact Information</legend>
+
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="e.g. +2348012345678" pattern="^\+?[0-9]{10,15}$" required>
+
+                    <label for="country">Country:</label>
+                    <select id="country" name="country" required>
+                        <option value="">--Select Country--</option>
+                        <option value="nigeria">Nigeria</option>
+                        <option value="ghana">Ghana</option>
+                        <option value="kenya">Kenya</option>
+                        <option value="south-africa">South Africa</option>
+                    </select>
+
+                    <label for="address">Address:</label>
+                    <textarea id="address" name="address" placeholder="Enter your full address" rows="3" required></textarea>
+                </fieldset>
+
+                <!-- Preferences -->
+                <fieldset>
+                    <legend>Preferences</legend>
+
+                    <label>
+                        <input type="checkbox" name="updates" value="yes" checked> Subscribe to updates
+                    </label>
+
+                    <p>Preferred Contact Method:</p>
+                    <label><input type="radio" name="contact_method" value="email" required> Email</label>
+                    <label><input type="radio" name="contact_method" value="phone"> Phone</label>
+                </fieldset>
+
+                <!-- Submit -->
+                <input type="submit" value="Submit Form">
+                <input type="reset" value="Reset Form">
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 HTML5 Assignment | Designed for Learning</p>
+    </footer>
+
+</body>
+</html>
